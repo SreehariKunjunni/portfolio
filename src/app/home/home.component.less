@@ -14,7 +14,13 @@
         color: black;
     }
 }
-
+::ng-deep .show-side-btn:focus {
+    outline: none !important;
+    border-style:none !important;
+}
+::ng-deep .show-side-btn:hover {
+    color: rgb(216, 39, 69);
+}
 .bg-container {
     position: fixed;
     top: 10%;
@@ -152,6 +158,7 @@ p-dialog {
 
 .top-menu {
     text-align: center;
+    
     .menu-item-container {
         border-right: 2px solid @pf-ash ;
         width: 20%;
@@ -485,9 +492,7 @@ p-dialog {
         color: palevioletred;
         background: none;
         border: none;
-        .fa-bars {
-            
-        }
+        .fa-bars {}
     }
     .bg-container {
         position: fixed;
@@ -499,15 +504,13 @@ p-dialog {
             width: 94%;
         }
     }
-
-   .loading-image{
-    width: 50%;
-    margin-top: 27%;
-}
-.loading-text {
-    margin-top: 0px !important;
-}
-    
+    .loading-image {
+        width: 50%;
+        margin-top: 27%;
+    }
+    .loading-text {
+        margin-top: 0px !important;
+    }
     ::ng-deep.menu-btn-container {
         display: block !important;
         width: 100%;
@@ -527,7 +530,6 @@ p-dialog {
         font-size: 14px;
         color: #2E3740;
     }
-  
     ::ng-deep.top-menu-container-shrinked {
         background: white;
         display: block !important;
