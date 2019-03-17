@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => { this.hideLoading = true; }, 500);
+    setTimeout(() => { this.hideLoading = true; }, 3000);
   }
   removeAllDiv(name) {
     if (name === 'about') {
