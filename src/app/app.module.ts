@@ -16,6 +16,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { LoadingComponent } from './loading/loading.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WrapengineComponent } from './wrapengine/wrapengine.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { WrapengineComponent } from './wrapengine/wrapengine.component';
     DialogModule,
     AngularFontAwesomeModule,
     SlideMenuModule,
-    TooltipModule
+    TooltipModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

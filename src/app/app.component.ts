@@ -7,6 +7,7 @@ import {
   transition,
   query,
 } from '@angular/animations';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-root',

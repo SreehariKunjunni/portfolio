@@ -2,6 +2,119 @@
 @pf-red : #882c2c;
 @pf-blue : rgb(17, 124, 140);
 @pf-dark-ash : #2e3740;
+@keyframes bounce {
+    from {
+        margin-top: 10px;
+    }
+    to {
+        margin-top: 25px;
+    }
+}
+
+@-webkit-keyframes bounce {
+    from {
+        margin-top: 10px;
+    }
+    to {
+        margin-top: 25px;
+    }
+}
+
+
+.skill-container {
+    position: fixed;
+    width: 100%;
+    text-align: -webkit-center;
+    .inner-skill-container {
+        padding: 10px;
+        width: 70%;
+        background: rgba(0, 0, 0, .7);
+        margin-top: 10%;
+        .close-button {
+            color: white;
+            float: right;
+            margin: 5px;
+            .close {
+                border-radius: 100%;
+                background-color: #ff2200;
+                width: 10px;
+                height: 10px;
+            }
+        }
+        .skill-heading-skills,
+        .skill-heading-tools,
+            {
+            color: white;
+            text-align: -webkit-auto;
+            font-size: 20px;
+            margin-left: 5%;
+            font-family: 'Russo One', sans-serif;
+        }
+        .skill-heading-tools {
+            text-align: -webkit-right;
+            margin-right: 5%;
+        }
+        .tools,
+        .skills {
+            font-family: 'Russo One', sans-serif;
+            color: #fff;
+            margin-left: 5%;
+            font-size: 15px;
+            list-style: none;
+            li {
+                margin: .5%;
+                cursor: pointer;
+            }
+        }
+        .skills {
+            li:hover {
+                color: #0aa1ff;
+                transform: scale(1.04, 1.04);
+            }
+        }
+        .tools {
+            li:hover {
+                color: #E93040;
+                transform: scale(1.04, 1.04);
+            }
+        }
+        .skills {
+            text-align: -webkit-auto;
+        }
+        .tools {
+            text-align: -webkit-right;
+        }
+        .diagram-container {
+            margin: 2%;
+            background: white;
+            ::ng-deep.ngx-charts {
+                margin-left: 8% !important;
+            }
+            .diagram-text {
+                margin: -5% 5% 5% 5%;
+                text-align: -webkit-auto;
+                overflow-wrap: break-word;
+            }
+        }
+        ::ng-deep.total-value,
+        ::ng-deep.total-label {
+            display: none !important;
+        }
+        ::ng-deep.advanced-pie-legend-wrapper {
+            width: 298px !important;
+            height: 289px !important;
+            margin-left: -43%;
+        }
+        ::ng-deep.legend-items {
+            white-space: nowrap;
+            overflow: auto;
+            float: left;
+            margin-left: 89px;
+            width: 215px;
+        }
+    }
+}
+
 ::ng-deep.copy-buton {
     margin-top: 22px !important;
     margin-left: 20px !important;
@@ -14,12 +127,23 @@
         color: black;
     }
 }
+
 ::ng-deep .show-side-btn:focus {
     outline: none !important;
-    border-style:none !important;
+    border-style: none !important;
 }
+
 ::ng-deep .show-side-btn:hover {
     color: rgb(216, 39, 69);
+}
+.skill-tool {
+    margin-left: 23%;
+    margin-top: 188px;
+    position: absolute;
+    color: #3a3636;
+    font-size: 15px;
+    
+    font-family: 'Russo One', sans-serif;
 }
 .bg-container {
     position: fixed;
@@ -30,6 +154,30 @@
     img {
         width: 50%;
     }
+    .label-container {
+        position:absolute;
+        margin-left: 43%;
+        margin-top: 56px;
+    .skill-btn-label {
+        font-family: 'Russo One', sans-serif;
+        color: rgb(39, 39, 39);
+        font-size: 15px;
+        animation-duration: .5s;
+        animation-name: bounce;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+}
+
+.bg-button {
+    position: fixed;
+    top: 38%;
+    width: 50%;
+    height: 100%;
+    background: inherit;
+    margin-left: 25%;
+    cursor: pointer;
 }
 
 ::ng-deep .copy-button:focus {
@@ -158,7 +306,6 @@ p-dialog {
 
 .top-menu {
     text-align: center;
-    
     .menu-item-container {
         border-right: 2px solid @pf-ash ;
         width: 20%;
