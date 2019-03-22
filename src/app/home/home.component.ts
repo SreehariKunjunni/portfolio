@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
   showPopup = false;
   showSide = false;
   showSkills = false;
+  showSkList = false;
   isChange = false;
   hideLoading = false;
   openAbout = false;
@@ -60,17 +61,23 @@ export class HomeComponent implements OnInit {
   colorScheme = {
     domain: ['#E93040', '#4C4C4C']
   };
-  skillTool =  'Adobe Photoshop';
-  view = [1000, 400];
+  skillTool = 'Adobe Photoshop';
+  view = [776, 400];
   constructor() { }
 
   ngOnInit() {
     setTimeout(() => { this.hideLoading = true; }, 30);
   }
+
+  showSkillList() {
+    this.showSkList = !this.showSkList;
+  }
+
   skillClick(event) {
     this.skillTool = event.target.innerText;
     this.colorScheme.domain = ['#0aa1ff', '#F48024'];
     console.log('skill Clicked : ', event);
+    this.showSkList = false;
     if (event.target.innerText === 'HTML') {
       this.confident = 80;
       this.yetToMaster = 20;
@@ -101,6 +108,7 @@ export class HomeComponent implements OnInit {
   toolClick(event) {
     this.skillTool = event.target.innerText;
     this.colorScheme.domain = ['#E93040', '#4C4C4C'];
+    this.showSkList = false;
     console.log('skill Clicked : ', event);
     if (event.target.innerText === 'Adobe Photoshop') {
       this.confident = 80;

@@ -16,82 +16,6 @@
         <img class="main-bg" src="https://raw.githubusercontent.com/sreeharikunjunni/portfolio/gh-pages/assets/Images/mainbg5.jpg"
             alt="bg">
     </div>
-    <div class="skill-container" *ngIf="showSkills">
-        <div class="inner-skill-container">
-            <div class="close-button" (click)="closeSkills()">
-                <span class="close"></span>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="skill-heading-skills">Skills</div>
-                    <ul class="skills">
-                        <li class="skill" (click)="skillClick($event)">HTML</li>
-                        <li class="skill" (click)="skillClick($event)">LESS</li>
-                        <li class="skill" (click)="skillClick($event)">CSS</li>
-                        <li class="skill" (click)="skillClick($event)">Bootstrap</li>
-                        <li class="skill" (click)="skillClick($event)">Angular 4</li>
-                        <li class="skill" (click)="skillClick($event)">TypeScript</li>
-                        <li class="skill" (click)="skillClick($event)">C++</li>
-                        <li class="skill" (click)="skillClick($event)">Java</li>
-                    </ul>
-                    <div class="skill-heading-tools">Tools</div>
-                    <ul class="tools">
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">Adobe Photoshop</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">Adobe Illustrator</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">Adobe InDesign</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">Adobe Dreamweaver</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">Visual Studio Code</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">Eclipse</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">SketchUp</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">MS Office</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">HitFilm</span>
-                        </li>
-                        <li class="tool" (click)="toolClick($event)">
-                            <span class="tool label">AVS Video Editor</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-8">
-                    <div class="diagram-container">
-                        <div class="row">
-                            <span class="skill-tool"> {{ skillTool }} </span>
-                            <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" [results]="pieData"> </ngx-charts-advanced-pie-chart>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <div class="diagram-text">
-                                    UX/UI design professional with solid background in brand marketing, research, graphic design and front-end development. Experience
-                                    working independently and collaborating with teams in start-up, agency
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="diagram-icon">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="menu-btn-container">
         <button class="show-side-btn" (click)="showSideNav()">
             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -154,6 +78,144 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <div class="skill-container" *ngIf="showSkills">
+        <div class="inner-skill-container">
+            <div class="close-button" (click)="closeSkills()">
+                <span class="close"></span>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 skills-list">
+                    <div class="skill-heading-skills">Skills</div>
+                    <ul class="skills">
+                        <li class="skill" (click)="skillClick($event)">HTML</li>
+                        <li class="skill" (click)="skillClick($event)">LESS</li>
+                        <li class="skill" (click)="skillClick($event)">CSS</li>
+                        <li class="skill" (click)="skillClick($event)">Bootstrap</li>
+                        <li class="skill" (click)="skillClick($event)">Angular 4</li>
+                        <li class="skill" (click)="skillClick($event)">TypeScript</li>
+                        <li class="skill" (click)="skillClick($event)">C++</li>
+                        <li class="skill" (click)="skillClick($event)">Java</li>
+                    </ul>
+                    <div class="skill-heading-tools">Tools</div>
+                    <ul class="tools">
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">Adobe Photoshop</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">Adobe Illustrator</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">Adobe InDesign</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">Adobe Dreamweaver</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">Visual Studio Code</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">Eclipse</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">SketchUp</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">MS Office</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">HitFilm</span>
+                        </li>
+                        <li class="tool" (click)="toolClick($event)">
+                            <span class="tool label">AVS Video Editor</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-5 skill-diagram-hidable">
+                    <div class="diagram-container">
+                        <div class="row">
+                            <span class="skill-tool"> {{ skillTool }} </span>
+                            <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" [results]="pieData"> </ngx-charts-advanced-pie-chart>
+                        </div>
+                        <!-- <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="diagram-text">
+                                        UX/UI design professional with solid background in brand marketing, research, graphic design and front-end development. Experience
+                                        working independently and collaborating with teams in start-up, agency
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="diagram-icon">
+    
+                                    </div>
+                                </div>
+                            </div> -->
+                    </div>
+                </div>
+                <div class="col-sm-12 unhide-skills">
+                    <div class="diagram-container">
+                        <div class="show-skills">
+                            <button class="show-skills-button" (click)="showSkillList()">
+                                <i class="fa fa-caret-left" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <span class="skill-tool"> {{ skillTool }} </span>
+                            <ngx-charts-advanced-pie-chart [view]="view" [scheme]="colorScheme" [results]="pieData"> </ngx-charts-advanced-pie-chart>
+                        </div>
+                        <div class="hidable-skills" [ngStyle]="{'width' : showSkList ? '100%' : '0%'}">
+                            <div style="margin:10px">
+                                <div class="skill-heading-skills">Skills</div>
+                                <ul class="skills">
+                                    <li class="skill" (click)="skillClick($event)">HTML</li>
+                                    <li class="skill" (click)="skillClick($event)">LESS</li>
+                                    <li class="skill" (click)="skillClick($event)">CSS</li>
+                                    <li class="skill" (click)="skillClick($event)">Bootstrap</li>
+                                    <li class="skill" (click)="skillClick($event)">Angular 4</li>
+                                    <li class="skill" (click)="skillClick($event)">TypeScript</li>
+                                    <li class="skill" (click)="skillClick($event)">C++</li>
+                                    <li class="skill" (click)="skillClick($event)">Java</li>
+                                </ul>
+                                <div class="skill-heading-tools">Tools</div>
+                                <ul class="tools">
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">Adobe Photoshop</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">Adobe Illustrator</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">Adobe InDesign</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">Adobe Dreamweaver</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">Visual Studio Code</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">Eclipse</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">SketchUp</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">MS Office</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">HitFilm</span>
+                                    </li>
+                                    <li class="tool" (click)="toolClick($event)">
+                                        <span class="tool label">AVS Video Editor</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <button (click)="test()"> test </button> -->

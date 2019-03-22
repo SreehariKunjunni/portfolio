@@ -20,20 +20,22 @@
     }
 }
 
+.unhide-skills {
+    display: none;
+}
 
 .skill-container {
-    position: fixed;
     width: 100%;
     text-align: -webkit-center;
     .inner-skill-container {
         padding: 10px;
-        width: 70%;
+        width: 85%;
         background: rgba(0, 0, 0, .7);
-        margin-top: 10%;
+        margin-top: 15px;
         .close-button {
             color: white;
             float: right;
-            margin: 5px;
+            margin: -2px;
             .close {
                 border-radius: 100%;
                 background-color: #ff2200;
@@ -59,11 +61,12 @@
             font-family: 'Russo One', sans-serif;
             color: #fff;
             margin-left: 5%;
-            font-size: 15px;
+            font-size: 14px;
             list-style: none;
             li {
                 margin: .5%;
                 cursor: pointer;
+                width:max-content;
             }
         }
         .skills {
@@ -85,10 +88,13 @@
             text-align: -webkit-right;
         }
         .diagram-container {
-            margin: 2%;
+            overflow:hidden;
+            margin: 12%;
             background: white;
             ::ng-deep.ngx-charts {
-                margin-left: 8% !important;
+                margin-left: 8%;
+                margin-top: -30px;
+                pointer-events: none !important;
             }
             .diagram-text {
                 margin: -5% 5% 5% 5%;
@@ -101,15 +107,15 @@
             display: none !important;
         }
         ::ng-deep.advanced-pie-legend-wrapper {
-            width: 298px !important;
-            height: 289px !important;
-            margin-left: -43%;
+            width: 707px !important;
+            float: right;
+            height: 0px !important;
+            margin-top: -30px;
         }
         ::ng-deep.legend-items {
             white-space: nowrap;
             overflow: auto;
             float: left;
-            margin-left: 89px;
             width: 215px;
         }
     }
@@ -136,15 +142,16 @@
 ::ng-deep .show-side-btn:hover {
     color: rgb(216, 39, 69);
 }
+
 .skill-tool {
-    margin-left: 23%;
-    margin-top: 188px;
+    margin-left: 109px;
+    margin-top: 157px;
     position: absolute;
     color: #3a3636;
-    font-size: 15px;
-    
+    font-size: 14px;
     font-family: 'Russo One', sans-serif;
 }
+
 .bg-container {
     position: fixed;
     top: 10%;
@@ -153,30 +160,32 @@
     text-align: center;
     img {
         width: 50%;
+        margin-top: 50px;
     }
     .label-container {
-        position:absolute;
+        position: absolute;
         margin-left: 43%;
         margin-top: 56px;
-    .skill-btn-label {
-        font-family: 'Russo One', sans-serif;
-        color: rgb(39, 39, 39);
-        font-size: 15px;
-        animation-duration: .5s;
-        animation-name: bounce;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
+        .skill-btn-label {
+            font-family: 'Russo One', sans-serif;
+            color: rgb(39, 39, 39);
+            font-size: 15px;
+            animation-duration: .5s;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
     }
-}
 }
 
 .bg-button {
     position: fixed;
-    top: 38%;
+    top: 15%;
     width: 50%;
     height: 100%;
     background: inherit;
     margin-left: 25%;
+    z-index: -4;
     cursor: pointer;
 }
 
@@ -365,8 +374,8 @@ p-dialog {
         position: absolute;
         margin: 25px;
         font-family: monospace;
-        font-size: 20px;
-        bottom: 0px;
+        font-size: 16px;
+        bottom: 10px;
     }
 }
 
@@ -461,7 +470,7 @@ p-dialog {
 
 .contact-div {
     overflow: hidden;
-    z-index: -5;
+    z-index: -3;
     position: fixed;
     top: 0px;
     margin-left: 15%;
@@ -626,8 +635,50 @@ p-dialog {
 }
 
 @media all and (max-width: 945px) and (min-width:50px) {
+    .bg-container .label-container{
+        margin-left: 33%;
+        margin-top: 1px;
+    }
+    .hidable-skills {
+        position: relative;
+        margin-top: -442px;
+        float: right;
+        background: rgba(0, 0, 0, .5);
+        transition: width .5s;// .skill-heading-skills,
+        // .skill-heading-tools,
+        //     {
+        //     color: black !important;
+        // }
+        // .tools,
+        // .skills {
+        //     color: black !important;
+        // }
+    }
+    .skills-list,
+    ::ng-deep.skill-diagram-hidable {
+        display: none !important;
+    }
     ::ng-deep.top-menu-container {
         display: none;
+    }
+    ::ng-deep.unhide-skills {
+        display: block !important;
+        overflow:hidden;
+        .show-skills {
+            float: right !important;
+            margin-right: 6px;
+            font-size: 42px;
+            .show-skills-button {
+                border-style: none;
+                background: inherit;
+                &:hover {
+                    color: #E93040;
+                }
+                &:focus {
+                    outline: none !important;
+                }
+            }
+        }
     }
     .about-text {
         font-size: 15px !important;
@@ -747,6 +798,51 @@ p-dialog {
             //     transform: scale(1.1, 1.1);
             // }
         }
+    }
+}
+
+@media all and (max-width: 1247px) and (min-width:1083px) {
+    ::ng-deep.diagram-container {
+        ::ng-deep.ngx-charts {
+            margin-left: 6% !important;
+        }
+        ::ng-deep.advanced-pie-legend-wrapper {
+            left: -8px;
+            position: relative;
+        }
+    }
+    .skill-tool {
+        margin-left: 92px !important;
+    }
+}
+
+@media all and (max-width: 1083px) and (min-width:417px) {
+    ::ng-deep.diagram-container {
+        ::ng-deep.ngx-charts {
+            margin-left: 3% !important;
+        }
+        ::ng-deep.advanced-pie-legend-wrapper {
+            left: -28px;
+            position: relative;
+        }
+    }
+    .skill-tool {
+        margin-left: 70px !important;
+    }
+}
+
+@media all and (max-width: 417px) and (min-width:50px) {
+    ::ng-deep.diagram-container {
+        ::ng-deep.ngx-charts {
+            margin-left: 1% !important;
+        }
+        ::ng-deep.advanced-pie-legend-wrapper {
+            left: -54px;
+            position: relative;
+        }
+    }
+    .skill-tool {
+        margin-left: 55px !important;
     }
 }
 
