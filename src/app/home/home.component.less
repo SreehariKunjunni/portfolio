@@ -643,7 +643,7 @@ p-dialog {
         position: relative;
         margin-top: -442px;
         float: right;
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, .8);
         transition: width .5s;// .skill-heading-skills,
         // .skill-heading-tools,
         //     {
@@ -687,7 +687,7 @@ p-dialog {
         display: block !important;
         margin: 1% 3%;
         font-size: 27px;
-        color: palevioletred;
+        color: rgb(255, 255, 255);
         background: none;
         border: none;
         .fa-bars {}
@@ -714,7 +714,7 @@ p-dialog {
         width: 100%;
         min-height: 50px;
         height: max-content;
-        background: #E0E0D3;
+        background: #2c333a;
         margin-top: -6px !important;
     }
     .main-heading {
@@ -726,30 +726,32 @@ p-dialog {
         word-break: break-word;
         margin-right: 10px;
         font-size: 14px;
-        color: #2E3740;
+        color: rgb(255, 255, 255);
     }
     ::ng-deep.top-menu-container-shrinked {
-        background: white;
+        background: rgba(0,0,0,.7);
         display: block !important;
         overflow: hidden;
         z-index: 50;
         position: fixed; // background: blue !important;
         transition: width 1s;
         ::ng-deep.top-menu {
-            background: white;
             text-align: left !important;
             margin-top: 21px !important;
             height: max-content;
+            background:none;
             ::ng-deep.menu-item-container {
                 width: 162px !important;
-                border-bottom: 2px rgba(0, 0, 0, 0.6) solid !important;
+                border-bottom: 2px white solid !important;
                 border-right: none !important;
                 margin: 30px 18px;
                 ::ng-deep.top-menu-item {
                     padding: 0px !important;
                     a {
+                        color:white;
                         i {
                             float: right !important;
+                            color:white;
                         }
                     }
                     &:hover {

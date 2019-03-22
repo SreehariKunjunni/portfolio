@@ -209,31 +209,38 @@ export class HomeComponent implements OnInit {
   }
 
   togleAboutTab() {
+    this.showSkills = false;
     this.removeAllDiv('about');
     this.openAbout = !this.openAbout;
   }
   openAboutTab() {
+    this.showSkills = false;
     this.removeAllDiv('about');
     this.togleAbout = !this.togleAbout;
   }
   togleWorksTab() {
+    this.showSkills = false;
     this.removeAllDiv('works');
     this.openWorks = !this.openWorks;
   }
   openWorksTab() {
+    this.showSkills = false;
     this.removeAllDiv('works');
     this.togleWorks = !this.togleWorks;
     this.isChange = true;
   }
   openResumeTab() {
+    this.showSkills = false;
     this.removeAllDiv('resume');
     this.openResume = !this.openResume;
   }
   togleResumeTab() {
+    this.showSkills = false;
     this.removeAllDiv('resume');
     this.togleResume = !this.togleResume;
   }
   togleContactTab() {
+    this.showSkills = false;
     this.removeAllDiv('contact');
     this.togleContact = !this.togleContact;
     if (this.togleContact === true) {
@@ -249,6 +256,7 @@ export class HomeComponent implements OnInit {
     }
   }
   openContactTab() {
+    this.showSkills = false;
     this.removeAllDiv('contact');
     this.openContact = !this.openContact;
     if (this.openContact === true) {
